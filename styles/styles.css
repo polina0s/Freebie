@@ -6,30 +6,98 @@
 
 body {
   font: 18px Gilroy, sans-serif;
-  background-color: #F1F1F2;
+  background-color: var(--back-grey);
   margin: 0;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   margin: 0;
 }
 
-button {
+:root {
+  --orange: #f7941e;
+}
+
+:root {
+  --btn-black: #231f20;
+}
+
+:root {
+  --text-black: #000000;
+}
+
+:root {
+  --back-grey: #f1f1f2;
+}
+
+:root {
+  --nav-grey: #fafafa;
+}
+
+:root {
+  --white: #ffffff;
+}
+
+.button {
   font: 18px Gilroy, sans-serif;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 9px 23px;
+  border: 1px solid;
+}
+
+.button:hover {
+  box-shadow: 10px 10px 15px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.7s;
+}
+
+.button--big {
+  padding: 20px 35px;
+  min-width: 200px;
+}
+
+.button--medium {
+  padding: 14px 35px;
+}
+
+.button--transparent-orange {
+  border: 1px solid var(--orange);
+  color: var(--orange);
+  background-color: transparent;
+}
+
+.button--transparent-black {
+  border: 1px solid var(--text-black);
+  color: var(--text-black);
+  background-color: transparent;
+}
+
+.button--orange {
+  border-color: var(--orange);
+  background-color: var(--orange);
+  color: var(--white);
+}
+
+.button--black {
+  border-color: var(--btn-black);
+  background-color: var(--btn-black);
+  color: var(--white);
 }
 
 a {
-  color: #000000;
+  color: var(--text-black);
   text-decoration: none;
 }
 
-a:hover {
-  color: #F7941E;
-  transition-duration: 1s;
-}
 /* Header */
 .header {
-  background-color: #FAFAFA;
+  background-color: var(--nav-grey);
   margin: 0 auto;
 }
 
@@ -41,29 +109,24 @@ a:hover {
   align-items: center;
   justify-content: space-between;
   margin: 0 auto;
-  color: #000000;
+  color: var(--text-black);
 }
- 
+
 .header__nav-list {
   list-style: none;
 }
 
 .header__nav-item {
   display: inline-block;
-  padding-right: 31px;
+  margin-right: 31px;
+}
+
+.header__nav-item:last-child {
+  margin-right: 0;
 }
 
 .logo {
   font: 18px Homemade Apple, sans-serif;
-}
-
-.header__button {
-  color: #F7941E;
-  width: 150px;
-  height: 43px;
-  border-radius: 5px;
-  border: 1px solid #F7941E;
-  background-color: transparent;
 }
 /* /Header
 
@@ -97,15 +160,6 @@ a:hover {
   margin-bottom: 52px;
 }
 
-.promo__button {
-  width: 200px;
-  height: 60px;
-  color: #FFFFFF;
-  border: none;
-  border-radius: 5px;
-  background-color: #F7941E;
-}
-
 .promo__cont-img {
   width: 719px;
   height: 700px;
@@ -119,7 +173,7 @@ a:hover {
 
 /* Media */
 .media {
-margin: 0 auto;
+  margin: 0 auto;
 }
 
 .media__container {
@@ -156,20 +210,11 @@ margin: 0 auto;
   margin-bottom: 35px;
 }
 
-.media__button {
-  width: 200px;
-  height: 60px;
-  color: #F7941E;
-  border-radius: 5px;
-  border: 1px solid #F7941E;
-  background-color: transparent;
-}
 /* /Media */
- 
+
 /* Gift */
 .gift {
-  background-color: #FFFFFF;
-
+  background-color: #ffffff;
 }
 
 .gift__text {
@@ -180,7 +225,7 @@ margin: 0 auto;
   font-weight: normal;
   font-size: 32px;
   margin-bottom: 23px;
-  padding-top: 96px; ;
+  padding-top: 96px;
 }
 
 .gift__description {
@@ -201,13 +246,13 @@ margin: 0 auto;
 .gift__card {
   width: 270px;
   height: 436px;
-  background-color: #FAFAFA;
+  background-color: var(--nav-grey);
 }
 
 .gift__card:hover {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   box-shadow: 10px 10px 15px 0 rgba(0, 0, 0, 0.05);
-  transition-duration: 1s;
+  transition: 0.7s;
 }
 
 .card__text {
@@ -222,14 +267,14 @@ margin: 0 auto;
 }
 
 .card__description {
-font-size: 14px; 
-margin: 0;
+  font-size: 14px;
+  margin: 0;
 }
 /* /Gift */
 
 /* Action */
 .action {
-  background-color: #F7941E;
+  background-color: var(--orange);
   margin: 0 auto;
 }
 
@@ -240,10 +285,12 @@ margin: 0;
   align-items: center;
   justify-content: space-between;
   margin: 0 auto;
+  padding-top: 81px;
+  padding-bottom: 69px;
 }
 
 .action__text {
-font-size: 32px;
+  font-size: 32px;
 }
 
 .action__buttons {
@@ -253,37 +300,11 @@ font-size: 32px;
   justify-content: space-between;
   margin: 0 auto;
 }
-
-.find__button {
-  width: 200px;
-  height: 50px;
-  background-color: #231F20;
-  color: #FFFFFF;
-  border-radius: 5px;
-  border: none;
-}
-
-.info__button {
-  width: 200px;
-  height: 50px;
-  background-color: transparent;
-  color: #000000;
-  border-radius: 5px;
-  border: 1px solid #000000;
-}
-
-.action__title {
-  padding-top: 81px;
-}
-
-.action__description {
-  margin-bottom: 69px;
-}
 /* /Action */
 
 /* Blog */
 .blog__container {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 .blog__text {
@@ -305,7 +326,7 @@ font-size: 32px;
 .main__article {
   width: 100%;
   max-width: 1170px;
-  background-color: #231F20;
+  background-color: var(--btn-black);
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
@@ -322,7 +343,7 @@ font-size: 32px;
 }
 
 .article__text {
-  color: #FFFFFF;
+  color: var(--white);
   margin-right: 200px;
   padding-top: 63px;
 }
@@ -340,13 +361,13 @@ font-size: 32px;
 
 .article__link {
   font-size: 18px;
-  color: #FFFFFF;
+  color: var(--white);
 }
 /* /Blog */
 
 /* Articles */
 .articles {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 .article__items {
@@ -368,7 +389,7 @@ font-size: 32px;
 
 .article-card:hover {
   box-shadow: 10px 10px 15px 0 rgba(0, 0, 0, 0.05);
-  transition-duration: 1s;
+  transition: 0.7s;
 }
 
 .article-card__title {
@@ -391,7 +412,7 @@ font-size: 32px;
 
 /* Footer */
 .footer {
-  background-color: #FAFAFA;
+  background-color: var(--nav-grey);
   height: 410px;
 }
 
@@ -408,6 +429,7 @@ font-size: 32px;
   margin: 0;
   padding: 0;
   margin-bottom: 43px;
+  position: relative;
 }
 
 .footer__nav-item {
@@ -435,14 +457,17 @@ font-size: 32px;
 .footer__logo {
   list-style: none;
   font: 18px Homemade Apple, sans-serif;
-  color: #F7941E;
+  color: var(--orange);
 }
 
-.line {
-  background-color: #000000;
-  height: 1px;
+.footer__nav-list::after {
+  position: absolute;
+  content: "";
   width: 1000px;
-  margin-block: 0;
+  height: 1px;
+  background-color: var(--text-black);
+  bottom: -43px;
+  left: -200px;
 }
 
 .social__nav {
