@@ -5,7 +5,7 @@
 }
 
 body {
-  font: 18px Gilroy, sans-serif;
+  font: 18px var(--font-family);
   background-color: var(--back-grey);
   margin: 0;
 }
@@ -16,36 +16,27 @@ h3,
 h4,
 h5,
 h6,
-p {
+p,
+ul {
   margin: 0;
 }
 
 :root {
   --orange: #f7941e;
-}
-
-:root {
   --btn-black: #231f20;
-}
-
-:root {
   --text-black: #000000;
-}
-
-:root {
   --back-grey: #f1f1f2;
-}
-
-:root {
   --nav-grey: #fafafa;
-}
-
-:root {
   --white: #ffffff;
+  --shadow: 10px 10px 15px 0 rgba(0, 0, 0, 0.2);
+  --card-shadow: 10px 10px 15px 0 rgba(0, 0, 0, 0.05);
+  --font-family: Gilroy, sans-serif;
+  --logo: Homemade Apple, sans-serif;
+  --link: Roboto, sans-serif;
 }
 
 .button {
-  font: 18px Gilroy, sans-serif;
+  font: 18px var(--font-family);
   cursor: pointer;
   border-radius: 5px;
   padding: 9px 23px;
@@ -53,7 +44,7 @@ p {
 }
 
 .button:hover {
-  box-shadow: 10px 10px 15px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: var(--shadow);
   transition: 0.7s;
 }
 
@@ -126,7 +117,7 @@ a {
 }
 
 .logo {
-  font: 18px Homemade Apple, sans-serif;
+  font: 18px var(--logo);
 }
 /* /Header
 
@@ -251,7 +242,7 @@ a {
 
 .gift__card:hover {
   background-color: #ffffff;
-  box-shadow: 10px 10px 15px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: var(--card-shadow);
   transition: 0.7s;
 }
 
@@ -267,7 +258,7 @@ a {
 }
 
 .card__description {
-  font-size: 14px;
+  font: 14px var(--link);
   margin: 0;
 }
 /* /Gift */
@@ -388,7 +379,7 @@ a {
 }
 
 .article-card:hover {
-  box-shadow: 10px 10px 15px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: var(--card-shadow);
   transition: 0.7s;
 }
 
@@ -456,7 +447,7 @@ a {
 
 .footer__logo {
   list-style: none;
-  font: 18px Homemade Apple, sans-serif;
+  font: 18px var(--logo);
   color: var(--orange);
 }
 
